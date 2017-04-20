@@ -1,0 +1,43 @@
+.offer-item {
+	position: relative;
+	&__image {
+		img {
+			display: block;
+			@media screen and(max-width: 960px) {
+				width: 100%;
+    		height: auto;
+			}
+		}
+	}
+	&__bg {
+		height: 145px;
+		background-color: #f0ebf1;
+	}
+}
+.offer-item-content {
+	width: 232px;
+	background-color: #fff;
+	padding: 35px 45px 5px;
+	@include horizontal-center;
+	box-sizing: border-box;
+	bottom: -102px;
+	&__title {
+		font-size: rem-calc(21);
+		text-align: center;
+		margin-bottom: 24px;
+	}
+	&__text {
+		font-size: rem-calc(12);
+		color: #777374;
+		margin-bottom: 30px;
+		line-height: rem-calc(22);
+	}
+	&__button-wrapper {
+		text-align: center;
+	}
+	&__button {
+		@extend .button;
+		font-size: rem-calc(10);
+		text-transform: uppercase;
+	}
+}

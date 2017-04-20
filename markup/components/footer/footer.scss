@@ -1,0 +1,81 @@
+.footer {
+	background: url(%=static=%general/footer.png) 50% 0 no-repeat;
+	background-size: cover;
+	height: 229px;
+	&__wrapper {
+		@extend .wrapper;
+		position: relative;
+	}
+}
+.footer-contacts {
+	padding: 48px 46px 72px;
+	background-color: #fff;
+	max-width: 704px;
+	box-sizing: border-box;
+	width: 100%;
+	@include horizontal-center;
+	top: -62px;
+	@media screen and(max-width: 480px)	{
+		width: 90%;
+		top: -90px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}	
+	&__title {
+		font-size: rem-calc(30);
+		margin-bottom: 18px;
+		font-weight: bold;
+		@media screen and(max-width: 480px)	{
+			text-align: center;
+		}	
+	}
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		@media screen and(max-width: 480px)	{
+			display: block;
+			width: 192px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+.footer-contacts-column {
+	width: 100%;
+	&._address {
+		max-width: 190px;
+	}
+	&._phone {
+		max-width: 173px;
+	}	
+	&._social {
+		max-width: 188px;
+	}		
+	&__title {
+		font-size: rem-calc(15);
+		margin-bottom: 2px;
+	}
+	&__address {
+		font-size: rem-calc(14);
+	}
+	&__phone {
+		font-size: rem-calc(20);
+		font-weight: bold;
+	}	
+}
+.footer-contacts-column-social {
+	display: flex;
+	justify-content: flex-start;
+	&__item {
+		margin-right: 4px;
+		&:hover {
+			@include opacity;
+		}
+		&._fb {
+			@include bg($fb);
+		}
+		&._instagram {
+			@include bg($instagram);
+		}		
+	}
+}

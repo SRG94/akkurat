@@ -1,0 +1,28 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head
+	include ../components/header/header
+	include ../components/menu/menu
+	include ../components/offers/offers
+	include ../components/offer-item/offer-item
+	include ../components/about-us/about-us
+	include ../components/map/map
+	include ../components/news/news
+	include ../components/news-item/news-item
+	include ../components/footer/footer
+
+	head
+		+head(head.defaults)
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfwOMfNXcuW0-wu-YGSBsCXImv6Dy0OK0&callback=initMap" async defer)
+	body
+		+header
+		+offers
+		+about-us
+		+news
+		+map
+		+footer
+		a(href="tel:+998977753506" title="").mobile-call._orange Позвонить!
+		.overlay
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

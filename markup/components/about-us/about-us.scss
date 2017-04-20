@@ -1,0 +1,59 @@
+.about-us {
+	background: url(%=static=%general/about-us.jpg) 50% 0 no-repeat;
+	background-size: cover;
+	height: 620px;
+	padding-top: 41px;
+	box-sizing: border-box;
+	/* padding-bottom: 56px; */
+	@media screen and(max-width: 480px)	{
+		height: auto;
+		padding-bottom: 32px;
+	}
+	&__wrapper {
+		@extend .wrapper;
+		@media screen and(max-width: 960px)	{ 
+			padding-left: 10px;
+			padding-right: 10px;
+		}		
+	}
+	&__title {
+		@extend .full-bordered-title;
+		font-size: rem-calc(33);
+		margin-bottom: 50px;
+		padding-bottom: 11px;
+		@media screen and(max-width: 768px)	{
+			font-size: rem-calc(25);
+			margin-bottom: 20px;
+		}		
+	}
+}
+.about-us-info {
+	display: flex;
+	justify-content: space-between;
+	@media screen and(max-width: 480px) {
+		display: block;
+	}
+	&__column {
+		width: 48%;
+		font-size: rem-calc(15);
+		line-height: rem-calc(21);
+		color: #fff;
+		@media screen and(max-width: 480px) {
+			width: auto;
+		}		
+		ul {
+			padding-left: 0;
+			margin-top: 0;
+			li {
+				padding-left: 15px;
+				position: relative;
+				&:before {
+					left: 0;
+					content: '-';
+					position: absolute;
+				}
+			}
+		}
+	}
+
+}
